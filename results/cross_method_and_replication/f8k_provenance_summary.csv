@@ -1,0 +1,7 @@
+source,method,n_images,n_complete_pairs,n_captions_total,n_captions_ok,archived_max_mae,archived_median_mae,archived_min_pearson
+ChineseCLIP_F8k,patch_gradcam,1000,1000,10000,10000,0.0018421956338,8.53392566569e-06,0.999763272473
+ChineseCLIP_F8k,lastblock_gradcam,1000,1000,10000,10000,,,
+ChineseCLIP_F8k,chefer_relevance,1000,1000,10000,10000,,,
+AltCLIP_F8k,patch_gradcam,1000,998,10000,9994,0.000808647600934,8.71202155395e-06,0.999986580482
+AltCLIP_F8k,lastblock_gradcam,1000,1000,10000,10000,,,
+AltCLIP_F8k,chefer_relevance,1000,1000,10000,10000,,,

@@ -1,0 +1,40 @@
+Photograph credits and reuse terms for Figures 1 and 3
+All five displayed Flickr photographs: CC BY 2.0
+https://creativecommons.org/licenses/by/2.0/
+
+Landing -- andy carter (Fig. 1)
+3567061016_62768dcce1.jpg
+https://www.flickr.com/photos/salsaboy/3567061016/
+Evidence: current_flickr_photo_page
+
+Andrieu Lecondeguy -- andy_c (Figs. 1 and 3)
+2764178773_d63b502812.jpg
+https://www.flickr.com/photos/11276503@N00/2764178773/
+Evidence: historical_original_yfcc100m_metadata
+
+Covered -- MNCASKHN (Fig. 1)
+3275704430_a75828048f.jpg
+https://www.flickr.com/photos/24238612@N02/3275704430/
+Evidence: historical_original_yfcc100m_metadata
+
+midair -- w.marsh (Fig. 1)
+3239021459_a6b71bb400.jpg
+https://www.flickr.com/photos/40943981@N00/3239021459/
+Evidence: historical_original_yfcc100m_metadata
+
+DSC00079 -- mister b 1138 (Figs. 1 and 3)
+2542662402_d781dd7f7c.jpg
+https://www.flickr.com/photos/13939001@N04/2542662402/
+Evidence: historical_original_yfcc100m_metadata
+
+All photographs are resized to the 224x224 model input view, with attribution
+overlays and patch masks applied where shown. Adapted images retain CC BY 2.0.
+Credit the authors and titles, link the photo sources and CC BY 2.0, identify
+modifications, and retain the license notice for the photographs and adaptations.
+
+The four historical records come from the public YFCC100M SQLite metadata database:
+https://multimedia-commons.s3-us-west-2.amazonaws.com/tools/etc/yfcc100m_dataset.sql
+Object Last-Modified: Sun, 31 Mar 2019 00:53:31 GMT; Accessed: 2026-11-16.
+CC licenses are irrevocable when their terms are followed:
+https://creativecommons.org/licenses/by/2.0/
+Raw historical rows and exact filename matches are retained in photo_license.json.

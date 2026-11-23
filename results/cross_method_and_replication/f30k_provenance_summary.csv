@@ -1,0 +1,7 @@
+source,method,n_images,n_complete_pairs,n_captions_total,n_captions_ok
+ChineseCLIP_F30k,patch_gradcam,975,973,9750,9745
+ChineseCLIP_F30k,lastblock_gradcam,975,975,9750,9750
+ChineseCLIP_F30k,chefer_relevance,975,975,9750,9750
+AltCLIP_F30k,patch_gradcam,975,974,9750,9749
+AltCLIP_F30k,lastblock_gradcam,975,975,9750,9750
+AltCLIP_F30k,chefer_relevance,975,975,9750,9750

@@ -1,0 +1,9 @@
+model,revision,language,n_captions,mean_tokens,max_tokens,captions_over_77,images_with_over_77,unknown_token_count,tokenizer_class,transformers_version
+OFA-Sys/chinese-clip-vit-large-patch14,660941af70c6ff89ce658a1735404c0f3e536c38,EN,5000,19.7756,51,0,0,0.0,BertTokenizer,5.16.1
+OFA-Sys/chinese-clip-vit-large-patch14,660941af70c6ff89ce658a1735404c0f3e536c38,ZH,5000,20.266,55,0,0,38.0,BertTokenizer,5.16.1
+BAAI/AltCLIP,17788d7d45af0e41d0f10682fe91d655ac96435c,EN,5000,17.0888,44,0,0,0.0,XLMRobertaTokenizer,5.16.1
+BAAI/AltCLIP,17788d7d45af0e41d0f10682fe91d655ac96435c,ZH,5000,16.1682,44,0,0,9.0,XLMRobertaTokenizer,5.16.1
+openai/clip-vit-base-patch32,3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268,EN,5000,14.1428,37,0,0,,CLIPTokenizer,5.16.1
+openai/clip-vit-base-patch32,3d74acf9a28c67741b2f4f2ea7635f0aaf6f0268,ZH,5000,46.4942,142,209,162,,CLIPTokenizer,5.16.1
+openai/clip-vit-large-patch14,32bd64288804d66eefd0ccbe215aa642df71cc41,EN,5000,14.1428,37,0,0,,CLIPTokenizer,5.16.1
+openai/clip-vit-large-patch14,32bd64288804d66eefd0ccbe215aa642df71cc41,ZH,5000,46.4942,142,209,162,,CLIPTokenizer,5.16.1

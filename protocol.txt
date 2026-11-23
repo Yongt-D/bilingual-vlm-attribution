@@ -1,0 +1,37 @@
+Image-Paired Bilingual VLM Visual Attribution Evaluation Protocol
+=================================================================
+
+1. Datasets and Checkpoints
+   - Flickr8k-CN test split (n = 1000 images; 5 EN + 5 ZH captions/image)
+   - Flickr30k-CN test split (n = 975 aligned images; 5 EN + 5 ZH captions/image; zero ID overlap)
+   - Bilingual ViT-L/14 checkpoints: OFA-Sys/chinese-clip-vit-large-patch14, BAAI/AltCLIP
+   - English-pretrained baselines (Flickr8k-CN Layer-0): openai/clip-vit-base-patch32,
+     openai/clip-vit-large-patch14
+
+2. Deterministic Inference Settings
+   - Transformers 4.49.0, PyTorch (FP32, eager attention, eval mode, TF32 disabled,
+     cuDNN benchmark disabled), 77-token text limit, random seed 20261115.
+
+3. Text-Conditioned ViT Attribution Methods (Native 16x16 Patch Grids)
+   Target scalar: cosine similarity s(I, C) = f_v(I)^T f_t(C) / (||f_v(I)|| ||f_t(C)||).
+   (a) Layer-0 Patch-Embedding Grad-CAM (patch_gradcam): Grad-CAM on
+       vision_model.embeddings.patch_embedding output.
+   (b) Layer-24 Final-Block Grad-CAM (lastblock_gradcam): Grad-CAM on
+       vision_model.encoder.layers[-1].layer_norm1 spatial patch tokens.
+   (c) All-Layer Gradient-Attention Relevance (chefer_relevance): Chefer et al.
+       (ICCV 2021) positive gradient-weighted self-attention propagation across all
+       24 ViT blocks.
+   Per-caption min-max normalization to [0, 1], followed by 5-caption within-language
+   averaging and min-max normalization. Non-finite or constant maps are logged
+   explicitly and never silently dropped or partially averaged.
+
+4. Spatial Consistency, Faithfulness, and Retrieval Linkage
+   - Spatial metrics: threshold-free map cosine (cos_en_zh), IoU (tau = 0.5),
+     symmetric KL (eps = 1e-9), |delta_entropy|, |delta_area|, and PCA-weighted CVAD.
+   - Patch occlusion (n = 200 shared Flickr8k-CN images, seed 20261115): top-, bottom-,
+     and 5 nested random-ranked native patch deletions at 26, 51, 77, 102, 128 patches
+     (q in [0.102, 0.500], zero-filled in normalized space = channel preprocessing mean).
+     Normalized partial AUC over [0, 0.5] averaged across EN/ZH for primary contrasts.
+   - Bidirectional retrieval (T2I and I2T) on full candidate pools (1000 on Flickr8k-CN;
+     975 on Flickr30k-CN), linked to spatial predictors via Spearman rank correlations
+     (Holm-adjusted within 20-test families) and fixed 5-fold image-level CV out-of-fold R^2.
